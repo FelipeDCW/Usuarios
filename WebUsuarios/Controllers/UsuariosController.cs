@@ -14,7 +14,7 @@ namespace WebUsuarios.Controllers
     public class UsuariosController : Controller
     {
         private readonly ApiConsumerService _apiService = new ApiConsumerService();
-        private const int PageSize = 3; // Número de elementos por página
+        private const int PageSize = 3;  
 
         // GET: Usuarios
         public async Task<ActionResult> Index(string searchTerm, int page = 1)
@@ -78,10 +78,7 @@ namespace WebUsuarios.Controllers
             }
             catch (Exception ex)
             {
-                // Si hay un error, se usará la lista de usuarios vacía (inicializada al principio)
-                // y los valores predeterminados de ViewBag ya asignados.
                 ViewBag.ErrorMessage = $"Error al cargar usuarios: {ex.Message}";
-                // No es necesario re-inicializar paginatedUsers aquí, ya que el modelo será una lista vacía.
                 return View(new List<UsuarioViewModel>());
             }
         }

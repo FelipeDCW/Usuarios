@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ApiUsuarios.Models
 {
-    public partial class UsuariosModels : DbContext
+    public class UsuariosModels : DbContext
     {
         public UsuariosModels()
             : base("name=UsuariosModels")

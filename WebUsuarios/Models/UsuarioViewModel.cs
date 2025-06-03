@@ -28,7 +28,6 @@ namespace WebUsuarios.Models
         [Display(Name = "Fecha de Nacimiento")]
         public DateTime FechaNacimiento { get; set; } 
 
-        // Propiedad para la búsqueda (no mapeada directamente a la BD)
         public string SearchTerm { get; set; }
     }
 }

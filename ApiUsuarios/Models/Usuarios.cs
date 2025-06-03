@@ -24,6 +24,6 @@ namespace ApiUsuarios.Models
 
         [Required]
         [Column(TypeName = "date")]
-        public DateTime? FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
     }
 }

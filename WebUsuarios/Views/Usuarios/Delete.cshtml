@@ -35,8 +35,8 @@
         <dt>
             @Html.DisplayNameFor(model => model.FechaNacimiento)
         </dt>
-        <dd>
-            @(Model.FechaNacimiento.HasValue ? Model.FechaNacimiento.Value.ToString("yyyy-MM-dd") : "N/A")
+        <dd>            
+            @Html.DisplayFor(model => model.FechaNacimiento)
         </dd>
 
     </dl>
