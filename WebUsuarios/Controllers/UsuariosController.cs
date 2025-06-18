@@ -14,7 +14,7 @@ namespace WebUsuarios.Controllers
     public class UsuariosController : Controller
     {
         private readonly ApiConsumerService _apiService = new ApiConsumerService();
-        private const int PageSize = 3;  
+        private const int PageSize = 100;  
 
         // GET: Usuarios
         public async Task<ActionResult> Index(string searchTerm, int page = 1)
