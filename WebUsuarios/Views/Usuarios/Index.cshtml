@@ -1,0 +1,134 @@
+﻿@model IEnumerable<WebUsuarios.Models.UsuarioViewModel>
+
+@{
+    ViewBag.Title = "Listado de Usuarios";
+}
+
+<h2>Listado de Usuarios</h2>
+
+<p class="text-end">
+    @Html.ActionLink("Crear Nuevo Usuario", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+
+<table id="example" class="display table-bordered mt-3">
+        <thead class="bg-primary text-white text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rut)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.FechaNacimiento)
+                </th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rut)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Correo)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                        </td>
+                        <td class="text-center">
+                            <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-secondary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5">No se encontraron usuarios.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            // Script para ocultar los mensajes de TempData después de unos segundos
+            setTimeout(function () {
+                $(".alert").fadeOut("slow");
+            }, 5000); // 5 segundos
+        });
+        new DataTable('#example',{
+            lengthMenu: [5, 10, 20, -1],
+            language: {
+                info: 'Mostrar pagina _PAGE_ of _PAGES_',
+                infoEmpty: 'No hay registros disponibles',
+                infoFiltered: '(filtradas desde _MAX_ total registros)',
+                lengthMenu: 'Mostrar _MENU_ registros por pagina',
+                zeroRecords: 'No existen registros',
+                search: 'Buscar',
+                lengthLabels: {'-1': 'Todos'}
+            },
+            layout: {
+                topStart: 'pageLength',
+                top2Start: {
+                    buttons: [
+                        {
+                            extend: 'excel',
+                            className: 'btn btn-success',
+                            text: '<i class="fa-solid fa-file-excel"></i>'
+                        },
+                        {
+                            extend: 'pdf',
+                            className: 'btn btn-danger',
+                            text: '<i class="fa-solid fa-file-pdf"></i>'
+                        },
+                        {
+                            extend: 'print',
+                            className: 'btn btn-warning',
+                            text: '<i class="fa-solid fa-print"></i>'
+                        }
+                    ]
+                },
+                topEnd: 'search',
+                bottomStart: 'info',
+                bottomEnd: 'paging'
+            }
+            
+        });
+    </script>
+}

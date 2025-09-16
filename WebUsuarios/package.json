@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/datatables.net": "^1.10.28",
+    "@types/jquery": "^3.5.32"
+  }
+}
