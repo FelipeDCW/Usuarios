@@ -11,8 +11,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="CapturaExcel"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{1EEAB3A6-6EEA-4CCE-A5E8-8D6D7FEE750C}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{8AF57C5F-8E68-4E90-810B-F5302B72A5AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,27 +25,177 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\FelipeAntonioDelCamp\Documents\Prueba\Proyecto\Usuarios\CapturaExcel\Usuarios.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\FelipeAntonioDelCamp\Documents\Prueba\Proyecto\Usuarios\CapturaExcel\Usuarios.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[FELIPE_PRAGMA.USUARIOS.sa]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{D4E7101B-1431-4266-8756-794487C0265E}"
-      DTS:ObjectName="FELIPE_PRAGMA.USUARIOS.sa">
+      DTS:refId="Package.ConnectionManagers[LOCAL]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{449CFE97-46A7-47D2-9FC4-DF6A6B12D437}"
+      DTS:ObjectName="LOCAL">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=FELIPE_PRAGMA;User ID=sa;Initial Catalog=USUARIOS;Persist Security Info=True;Encrypt=False;TrustServerCertificate=True;Application Name=SSIS-CapturaExcel-{D4E7101B-1431-4266-8756-794487C0265E}FELIPE_PRAGMA.USUARIOS.sa;">
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=FELIPE_PRAGMA;User ID=sa;Initial Catalog=USUARIOS;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-CapturaExcel-{449CFE97-46A7-47D2-9FC4-DF6A6B12D437}FELIPE_PRAGMA.USUARIOS.sa1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASNGz1ERkgkO+27gtokQCvwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADBCp1f6iioNDLLEvOzrEAelguUJDyQTksIUWs24ndUAQAAAAAOgAAAAAIAACAAAACWyd4gezyX+NLneqwFGXx1VRR3A/kSbl4QdjjiirSuLSAAAAAMaQEavn+Lw87Skvldq4fi1pfA0YV9q3kVKrvAutLx8UAAAABMknqbOXV/u3g5i38y35UlO7sykKbzWdVl0DUg7k0RHSsYuhxBd9JsBEAr4tKNgNowGHsXSsQWCbcJDcUOzKIP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASNGz1ERkgkO+27gtokQCvwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIeSiIVej36h2M1xJ6T6KnK1kIYisP/pR/ZCz1NMMISQAAAAAOgAAAAAIAACAAAAAm0XbkOnTHU5Ju6bW2JFKjxosKImqIzbpKyYC+QEdmjiAAAAC+3oErQ1EscV51BY9UK+gPyW0Lbfmah34TjXXHOZnJmkAAAADGC+e9U/8bVrOZr4AyCPnYmB1srVjIxB9Egp+ZpRWvkIdcQ7A+LvuLwSqWe4v15IHJUWLI3EbJemMQV5ntsyq1</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BD53357E-F92A-4708-87E1-62696C86BE17}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Correo">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{180028E4-5E1A-4DF8-9BAE-5E8A302822A8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FechaNac">
+      <DTS:VariableValue
+        DTS:DataType="7">9/16/2025 3:37:27 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13B05CD0-5EDB-4C2D-A8A5-87B78EE0F555}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Nombre">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{00C2F3DA-99D1-440A-B8CC-63FD7F2ABC32}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RegistrosObtenidos">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{56B0F5D4-F1B3-44EA-A9F0-FEEF9097FF33}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Rut">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Contenedor de bucles Foreach"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contenedor de bucles Foreach"
+      DTS:DTSID="{0750EEE1-238C-4BC1-9824-4BACDCE5A07C}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contenedor de bucles Foreach">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{C1C5FAA8-6D4C-4B55-A3CA-A1CA862BB57E}"
+        DTS:ObjectName="{C1C5FAA8-6D4C-4B55-A3CA-A1CA862BB57E}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateAllRows"
+            VarName="User::RegistrosObtenidos" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Contenedor de bucles Foreach\Tarea Ejecutar SQL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tarea Ejecutar SQL"
+          DTS:DTSID="{F6F906B0-79DA-41B0-88A6-5814DE507805}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarea Ejecutar SQL"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{449CFE97-46A7-47D2-9FC4-DF6A6B12D437}"
+              SQLTask:SqlStatementSource="INS_ExisteRut ?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@Nombre"
+                SQLTask:DtsVariableName="User::Nombre"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@Rut"
+                SQLTask:DtsVariableName="User::Rut"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@Correo"
+                SQLTask:DtsVariableName="User::Correo"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@FechaNacimiento"
+                SQLTask:DtsVariableName="User::FechaNac"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="7"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{A2560E57-B203-434E-A6BB-FAAF0DBA35A3}"
+          DTS:ObjectName="{A2560E57-B203-434E-A6BB-FAAF0DBA35A3}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Nombre" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{4657645F-A71F-496A-9708-7CB6BB500FEF}"
+          DTS:ObjectName="{4657645F-A71F-496A-9708-7CB6BB500FEF}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::Rut" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{6E69E0A2-7185-4133-9C8B-B58EFA563EED}"
+          DTS:ObjectName="{6E69E0A2-7185-4133-9C8B-B58EFA563EED}"
+          DTS:ValueIndex="2"
+          DTS:VariableName="User::Correo" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{9A9CAA12-2B67-46CD-A511-5544F088360F}"
+          DTS:ObjectName="{9A9CAA12-2B67-46CD-A511-5544F088360F}"
+          DTS:ValueIndex="3"
+          DTS:VariableName="User::FechaNac" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Importa Datos Excel"
       DTS:CreationName="Microsoft.Pipeline"
@@ -60,95 +210,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\Importa Datos Excel\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Importa Datos Excel\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Conditional Split.Inputs[Conditional Split Input].Columns[Id]"
-                      cachedDataType="i4"
-                      cachedName="Id"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Id]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Importa Datos Excel\Conditional Split.Outputs[Case 1]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Case 1"
-                  synchronousInputId="Package\Importa Datos Excel\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Id]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(Id)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Importa Datos Excel\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Importa Datos Excel\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Importa Datos Excel\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Importa Datos Excel\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\Importa Datos Excel\Data Conversion"
               componentClassID="Microsoft.DataConvert"
@@ -178,12 +239,12 @@
                   synchronousInputId="Package\Importa Datos Excel\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Idm]"
+                      refId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Idm]"
-                      name="Idm"
+                      lineageId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Id]"
+                      name="Id"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -217,143 +278,6 @@
                       refId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Importa Datos Excel\Destino de ADO NET"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
-              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="Destino de ADO NET"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de destino."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Usuarios"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
-                  expressionType="Notify"
-                  name="BatchSize">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
-                  expressionType="Notify"
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
-                  expressionType="Notify"
-                  name="UseBulkInsertWhenPossible">true</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Importa Datos Excel\Destino de ADO NET.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FELIPE_PRAGMA.USUARIOS.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[FELIPE_PRAGMA.USUARIOS.sa]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de ADO NET">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Nombre]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Nombre"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Nombre]"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Nombre]" />
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Rut]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Rut"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Rut]"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Rut]" />
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Correo]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Correo"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Correo]"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Correo]" />
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Fecha de Nacimiento]"
-                      cachedDataType="date"
-                      cachedName="Fecha de Nacimiento"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaNacimiento]"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Fecha de Nacimiento]" />
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Idm]"
-                      cachedDataType="i4"
-                      cachedName="Idm"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Id]"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Idm]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Nombre]"
-                      dataType="wstr"
-                      length="255"
-                      name="Nombre" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Rut]"
-                      dataType="wstr"
-                      length="50"
-                      name="Rut" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Correo]"
-                      dataType="wstr"
-                      length="255"
-                      name="Correo" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaNacimiento]"
-                      dataType="dbTimeStamp"
-                      name="FechaNacimiento" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Importa Datos Excel\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -541,750 +465,61 @@
               </outputs>
             </component>
             <component
-              refId="Package\Importa Datos Excel\Merge Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
-              version="1">
+              refId="Package\Importa Datos Excel\Recordset Destination"
+              componentClassID="Microsoft.RecordsetDestination"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="Recordset Destination">
               <properties>
                 <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::RegistrosObtenidos</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input]"
+                  refId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input]"
                   hasSideEffects="true"
-                  name="Merge Join Left Input">
+                  name="Recordset Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Rut]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Rut"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Rut]" />
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Nombre]"
+                      refId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input].Columns[Nombre]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Nombre"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Nombre]" />
+                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Nombre]" />
                     <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Correo]"
+                      refId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input].Columns[Rut]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Rut"
+                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Rut]" />
+                    <inputColumn
+                      refId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input].Columns[Correo]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Correo"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Correo]" />
+                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Correo]" />
                     <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Fecha de Nacimiento]"
+                      refId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input].Columns[Fecha de Nacimiento]"
                       cachedDataType="date"
                       cachedName="Fecha de Nacimiento"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Fecha de Nacimiento]" />
+                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Fecha de Nacimiento]" />
                     <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Idm]"
-                      cachedDataType="i4"
-                      cachedName="Idm"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Idm]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Right Input].Columns[Rut]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Rut"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Rut]" />
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Right Input].Columns[Id]"
+                      refId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input].Columns[Id]"
                       cachedDataType="i4"
                       cachedName="Id"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Id]" />
+                      lineageId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
-              <outputs>
-                <output
-                  refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output]"
-                  isSorted="true"
-                  name="Merge Join Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Nombre]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Nombre]"
-                      name="Nombre">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Nombre]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Rut]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Rut]"
-                      name="Rut"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Rut]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Correo]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Correo]"
-                      name="Correo">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Correo]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Fecha de Nacimiento]"
-                      dataType="date"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Fecha de Nacimiento]"
-                      name="Fecha de Nacimiento">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Fecha de Nacimiento]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Idm]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Idm]"
-                      name="Idm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input].Columns[Idm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Id]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output].Columns[Id]"
-                      name="Id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Right Input].Columns[Id]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Importa Datos Excel\Origen de ADO NET"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
-              name="Origen de ADO NET"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de origen."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Usuarios"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especificar el modo de recuperar información de columnas externas"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Importa Datos Excel\Origen de ADO NET.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FELIPE_PRAGMA.USUARIOS.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[FELIPE_PRAGMA.USUARIOS.sa]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
-                  name="Salida de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Id]"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Id]"
-                      name="Id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombre]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Nombre]"
-                      length="50"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombre]"
-                      name="Nombre"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Rut]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Rut]"
-                      length="50"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Rut]"
-                      name="Rut"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Correo]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Correo]"
-                      length="200"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Correo]"
-                      name="Correo"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaNacimiento]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaNacimiento]"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaNacimiento]"
-                      name="FechaNacimiento"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Nombre]"
-                      dataType="wstr"
-                      length="50"
-                      name="Nombre" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Rut]"
-                      dataType="wstr"
-                      length="50"
-                      name="Rut" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Correo]"
-                      dataType="wstr"
-                      length="200"
-                      name="Correo" />
-                    <externalMetadataColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaNacimiento]"
-                      dataType="dbDate"
-                      name="FechaNacimiento" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Id]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Id]"
-                      name="Id" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Nombre]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Nombre]"
-                      name="Nombre" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Rut]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Rut]"
-                      name="Rut" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Correo]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Correo]"
-                      name="Correo" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FechaNacimiento]"
-                      dataType="dbDate"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FechaNacimiento]"
-                      name="FechaNacimiento" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Importa Datos Excel\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Importa Datos Excel\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort.Inputs[Sort Input].Columns[Id]"
-                      cachedDataType="i4"
-                      cachedName="Id"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort.Inputs[Sort Input].Columns[Nombre]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Nombre"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombre]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort.Inputs[Sort Input].Columns[Rut]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Rut"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Rut]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort.Inputs[Sort Input].Columns[Correo]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="Correo"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Correo]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort.Inputs[Sort Input].Columns[FechaNacimiento]"
-                      cachedDataType="dbDate"
-                      cachedName="FechaNacimiento"
-                      lineageId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaNacimiento]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Importa Datos Excel\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Id]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Id]"
-                      name="Id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Nombre]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Nombre]"
-                      name="Nombre">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombre]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Rut]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Rut]"
-                      name="Rut"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Rut]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Correo]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[Correo]"
-                      name="Correo">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Correo]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[FechaNacimiento]"
-                      dataType="dbDate"
-                      lineageId="Package\Importa Datos Excel\Sort.Outputs[Sort Output].Columns[FechaNacimiento]"
-                      name="FechaNacimiento">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaNacimiento]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Importa Datos Excel\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input].Columns[Nombre]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Nombre"
-                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Nombre]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input].Columns[Rut]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Rut"
-                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Rut]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input].Columns[Correo]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Correo"
-                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Correo]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input].Columns[Fecha de Nacimiento]"
-                      cachedDataType="date"
-                      cachedName="Fecha de Nacimiento"
-                      lineageId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Fecha de Nacimiento]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input].Columns[Idm]"
-                      cachedDataType="i4"
-                      cachedName="Idm"
-                      lineageId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Idm]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Nombre]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Nombre]"
-                      name="Nombre">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Nombre]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Rut]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Rut]"
-                      name="Rut"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Rut]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Correo]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Correo]"
-                      name="Correo">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Correo]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Fecha de Nacimiento]"
-                      dataType="date"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Fecha de Nacimiento]"
-                      name="Fecha de Nacimiento">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output].Columns[Fecha de Nacimiento]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Idm]"
-                      dataType="i4"
-                      lineageId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output].Columns[Idm]"
-                      name="Idm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Idm]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
             </component>
           </components>
           <paths>
             <path
-              refId="Package\Importa Datos Excel.Paths[Case 1]"
-              endId="Package\Importa Datos Excel\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
-              name="Case 1"
-              startId="Package\Importa Datos Excel\Conditional Split.Outputs[Case 1]" />
-            <path
               refId="Package\Importa Datos Excel.Paths[Data Conversion Output]"
-              endId="Package\Importa Datos Excel\Sort 1.Inputs[Sort Input]"
+              endId="Package\Importa Datos Excel\Recordset Destination.Inputs[Recordset Destination Input]"
               name="Data Conversion Output"
               startId="Package\Importa Datos Excel\Data Conversion.Outputs[Data Conversion Output]" />
             <path
@@ -1292,31 +527,21 @@
               endId="Package\Importa Datos Excel\Data Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Importa Datos Excel\Leer Excel.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Importa Datos Excel.Paths[Merge Join Output]"
-              endId="Package\Importa Datos Excel\Conditional Split.Inputs[Conditional Split Input]"
-              name="Merge Join Output"
-              startId="Package\Importa Datos Excel\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\Importa Datos Excel.Paths[Salida de origen de ADO NET]"
-              endId="Package\Importa Datos Excel\Sort.Inputs[Sort Input]"
-              name="Salida de origen de ADO NET"
-              startId="Package\Importa Datos Excel\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\Importa Datos Excel.Paths[Sort Output]"
-              endId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Importa Datos Excel\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Importa Datos Excel.Paths[Sort Output1]"
-              endId="Package\Importa Datos Excel\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Importa Datos Excel\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{20160F1D-9535-40F4-B1C1-886BF0A855D0}"
+      DTS:From="Package\Importa Datos Excel"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Contenedor de bucles Foreach" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
 <!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
@@ -1328,11 +553,44 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="172,41.3333333333334"
           Id="Package\Importa Datos Excel"
-          TopLeft="239.999986886979,83.1999994214376" />
+          TopLeft="252.499986328185,75.6736837146014" />
+        <NodeLayout
+          Size="173.333333333334,42.6666666666667"
+          Id="Package\Contenedor de bucles Foreach\Tarea Ejecutar SQL"
+          TopLeft="37.9583207884185,21.9824532931147" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="243.333333333334,89.3333333333334"
+          Size="243.333333333334,132.666666666667"
+          Id="Package\Contenedor de bucles Foreach"
+          TopLeft="214.374990416691,190.210524227315" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="337.270821705771,117.007017047935">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.2035071793808"
+              Start="0,0"
+              End="0,65.7035071793808">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.7035071793808" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1340,189 +598,57 @@
     design-time-name="Package\Importa Datos Excel">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="172.666666666667,41.3333333333334"
-          Id="Package\Importa Datos Excel\Origen de ADO NET"
-          TopLeft="74.0740700268453,213.777776291194" />
-        <NodeLayout
-          Size="156,41.3333333333334"
-          Id="Package\Importa Datos Excel\Data Conversion"
-          TopLeft="279.629614351341,114.59259179573" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="127.333333333334,41.3333333333334"
           Id="Package\Importa Datos Excel\Leer Excel"
-          TopLeft="78.7499957097075,114.582455346314" />
+          TopLeft="81.8749955700092,118.687718459134" />
         <NodeLayout
-          Size="97.3333333333334,41.3333333333334"
-          Id="Package\Importa Datos Excel\Sort"
-          TopLeft="379.629608887582,232.07407246026" />
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Importa Datos Excel\Data Conversion"
+          TopLeft="285.879614071944,113.908381276927" />
         <NodeLayout
-          Size="176.666666666667,41.3333333333334"
-          Id="Package\Importa Datos Excel\Destino de ADO NET"
-          TopLeft="690.740703000332,110.740739970663" />
-        <NodeLayout
-          Size="129.333333333334,41.3333333333334"
-          Id="Package\Importa Datos Excel\Merge Join"
-          TopLeft="554.629599326004,229.18518359146" />
-        <NodeLayout
-          Size="106.666666666667,41.3333333333334"
-          Id="Package\Importa Datos Excel\Sort 1"
-          TopLeft="535.555526294092,114.59259179573" />
-        <NodeLayout
-          Size="153.333333333334,41.3333333333334"
-          Id="Package\Importa Datos Excel\Conditional Split"
-          TopLeft="753.703662523151,222.444442897593" />
-        <EdgeLayout
-          Id="Package\Importa Datos Excel.Paths[Sort Output1]"
-          TopLeft="477.229608887582,251.42962802586">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="77.399990438422,0"
-              Start="0,0"
-              End="69.899990438422,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="69.899990438422,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Importa Datos Excel.Paths[Sort Output]"
-          TopLeft="588.755526294092,156.19259179573">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="30.6740730319123,72.9925917957297"
-              Start="0,0"
-              End="30.6740730319123,65.4925917957297">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.4962958978649" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.4962958978649"
-                    Point2="0,36.4962958978649"
-                    Point3="4,36.4962958978649" />
-                  <mssgle:LineSegment
-                    End="26.6740730319123,36.4962958978649" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26.6740730319123,36.4962958978649"
-                    Point2="30.6740730319123,36.4962958978649"
-                    Point3="30.6740730319123,40.4962958978649" />
-                  <mssgle:LineSegment
-                    End="30.6740730319123,65.4925917957297" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Importa Datos Excel.Paths[Salida de origen de ADO NET]"
-          TopLeft="246.874070026845,234.577776291194">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="132.755538860737,18.296296169066"
-              Start="0,0"
-              End="125.255538860737,18.296296169066">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="62.3777694303683,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="62.3777694303683,0"
-                    Point2="66.3777694303683,0"
-                    Point3="66.3777694303683,4" />
-                  <mssgle:LineSegment
-                    End="66.3777694303683,14.296296169066" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66.3777694303683,14.296296169066"
-                    Point2="66.3777694303683,18.296296169066"
-                    Point3="70.3777694303683,18.296296169066" />
-                  <mssgle:LineSegment
-                    End="125.255538860737,18.296296169066" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Importa Datos Excel.Paths[Merge Join Output]"
-          TopLeft="684.229599326004,246.614813244527">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69.4740631971471,0"
-              Start="0,0"
-              End="61.9740631971471,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="61.9740631971471,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="184,42.6666666666667"
+          Id="Package\Importa Datos Excel\Recordset Destination"
+          TopLeft="516.249976921827,116.999998715363" />
         <EdgeLayout
           Id="Package\Importa Datos Excel.Paths[Excel Source Output]"
-          TopLeft="206.083329043041,135.254190237689">
+          TopLeft="209.208328903342,137.29804986803">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="73.5462853083002,0"
+              EndConnector="76.6712851686015,0"
               Start="0,0"
-              End="66.0462853083002,0">
+              End="69.1712851686015,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.0462853083002,0" />
+                    End="69.1712851686015,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.0231426541501,5,16,16"
+              BoundingBox="26.5856425843008,5,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Importa Datos Excel.Paths[Data Conversion Output]"
-          TopLeft="435.629614351341,135.39259179573">
+          TopLeft="444.546280738611,136.787523329478">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="99.9259119427507,0"
+              EndConnector="71.7036961832164,0"
               Start="0,0"
-              End="92.4259119427507,0">
+              End="64.2036961832164,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="92.4259119427507,0" />
+                    End="64.2036961832164,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1531,53 +657,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Importa Datos Excel.Paths[Case 1]"
-          TopLeft="830.503662523151,222.444442897593">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51.362959522819,-70.10370292693"
-              Start="0,0"
-              End="-51.362959522819,-62.60370292693">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-31.051851463465" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-31.051851463465"
-                    Point2="0,-35.051851463465"
-                    Point3="-4,-35.051851463465" />
-                  <mssgle:LineSegment
-                    End="-47.362959522819,-35.051851463465" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.362959522819,-35.051851463465"
-                    Point2="-51.362959522819,-35.051851463465"
-                    Point3="-51.362959522819,-39.051851463465" />
-                  <mssgle:LineSegment
-                    End="-51.362959522819,-62.60370292693" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-40.8995656989095,-30.051851463465,30.436171875,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Importa Datos Excel\Origen de ADO NET">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Importa Datos Excel\Leer Excel">
     <Properties>
@@ -1588,14 +670,6 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Importa Datos Excel\Destino de ADO NET">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

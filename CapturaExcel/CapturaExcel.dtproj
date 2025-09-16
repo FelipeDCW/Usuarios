@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">FELIPE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASNGz1ERkgkO+27gtokQCvwAAAAACAAAAAAAQZgAAAAEAACAAAACgwUhdMwJyOjgyHqhiIIL2GCOnVByNxXxgL4aHa67iygAAAAAOgAAAAAIAACAAAABr3AA4P50G5hXLQJmIbNxteLCBUJoeOJHfNuM3GoXaupAAAAC/fvo85W3duqlNDf9Tlnb7K8xfo4zi14wb+/R6yNzGC2PWRaq+tgUSDYNnsmYenwRSE3x/9TNU05UR0bIIrUMaJikgMztteanxYZSGfhfVGPEoCXMEgh8g0iLzXNP6HdSA671WpLOgIWqfDE5TIBZlCP4wV53SI+N6cKTmLRQqqJ/k+lcrE1JwaC1AVpgwvfNAAAAA/6bEsmxZg5VvVighFzqpldZsseeKgecjSpDNc19tZY8Hj1WdJtTV6VxiohUEHVgMuE9Ws19ekG+FWsEWyP/udg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASNGz1ERkgkO+27gtokQCvwAAAAACAAAAAAAQZgAAAAEAACAAAACB44G4/t2v/rCN3Uy6d53RraFIpacOudaxMWpdHrqOTAAAAAAOgAAAAAIAACAAAACtQ4ru4KA6jNC2LHUQVYqrB7UGd4g7xeh3uEAEKKzLHpAAAAC7WsZrJvyCbqr08EYkFMpCEdxJ4BXv/kcCNGN14FitshH9VPtRiJQGKUzzVJ46JDdamj2PqxozSIhhJnw6MgKO5sRsEIFoTxaD1jLWgeied5cES3FvQ4pdu4asm+/jRK2N/NDGHKD+B6GKEhQSbrMBQaiQbhojRwJZdBDgAm216dCY87hhFUTxJ6PbWH4n2txAAAAAdT9Yt/am7HcdzOjtD3epGU6prGILPL7YDuqT/ClpSkifO9cgFGxXW+Cre9V1AUxIgJ8KZLnxOuHKPNYstTkgkQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">CapturaExcel</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">48</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">57</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{1EEAB3A6-6EEA-4CCE-A5E8-8D6D7FEE750C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8AF57C5F-8E68-4E90-810B-F5302B72A5AD}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -78,7 +78,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\FelipeAntonioDelCamp\Documents\Prueba\Proyecto\Usuarios\CapturaExcel\Usuarios.xlsx;Extended Properties="Excel 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\FelipeAntonioDelCamp\Documents\Prueba\Proyecto\Usuarios\CapturaExcel\Usuarios.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -184,7 +184,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -199,7 +199,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -210,11 +210,41 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=FELIPE_PRAGMA;User ID=sa;Initial Catalog=USUARIOS;Persist Security Info=True;Encrypt=False;TrustServerCertificate=True;Application Name=SSIS-CapturaExcel-{D4E7101B-1431-4266-8756-794487C0265E}FELIPE_PRAGMA.USUARIOS.sa;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=FELIPE_PRAGMA;User ID=sa;Initial Catalog=USUARIOS;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-CapturaExcel-{449CFE97-46A7-47D2-9FC4-DF6A6B12D437}FELIPE_PRAGMA.USUARIOS.sa1;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.ConnectUsingManagedIdentity">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.ConnectRetryCount">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.ConnectRetryInterval">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">5</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.ConnectUsingManagedIdentity">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -229,7 +259,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -244,7 +274,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.Password">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -258,7 +288,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -273,7 +303,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -288,7 +318,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FELIPE_PRAGMA.USUARIOS.sa.UserName">
+                <SSIS:Parameter SSIS:Name="CM.LOCAL.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
