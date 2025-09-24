@@ -12,11 +12,11 @@ namespace DataAccess.Usuarios
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
-    public partial class USUARIOSEntities : DbContext
+    using Business.Entities;
+    public partial class UsuariosConnection : DbContext
     {
-        public USUARIOSEntities()
-            : base("name=USUARIOSEntities")
+        public UsuariosConnection()
+            : base("name=UsuariosConnection")
         {
         }
     
@@ -25,6 +25,6 @@ namespace DataAccess.Usuarios
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
     }
 }

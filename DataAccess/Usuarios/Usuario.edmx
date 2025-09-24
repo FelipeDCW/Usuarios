@@ -4,8 +4,8 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="USUARIOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Usuarios">
+      <Schema Namespace="UsuarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -15,15 +15,15 @@
           <Property Name="Correo" Type="nvarchar" MaxLength="255" />
           <Property Name="FechaNacimiento" Type="date" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="USUARIOSModelStoreContainer">
-          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+        <EntityContainer Name="UsuarioModelStoreContainer">
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="USUARIOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Usuarios">
+      <Schema Namespace="UsuarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -33,18 +33,18 @@
           <Property Name="Correo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-        <EntityContainer Name="USUARIOSEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+        <EntityContainer Name="UsuariosConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="USUARIOSModelStoreContainer" CdmEntityContainer="USUARIOSEntities">
-          <EntitySetMapping Name="Usuarios">
-            <EntityTypeMapping TypeName="USUARIOSModel.Usuarios">
-              <MappingFragment StoreEntitySet="Usuarios">
+        <EntityContainerMapping StorageEntityContainer="UsuarioModelStoreContainer" CdmEntityContainer="UsuariosConnection">
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="UsuarioModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Rut" ColumnName="Rut" />

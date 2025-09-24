@@ -59,7 +59,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Usuario.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\Usuario.cs" />
+    <Compile Include="Usuarios\Usuario.cs">
+      <DependentUpon>Usuario.tt</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\Usuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,22 +72,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Usuario.tt</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\Usuarios.cs">
-      <DependentUpon>Usuario.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="Usuarios\Usuario.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Usuario.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="Usuarios\UsuariosRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="Usuarios\Usuario.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Usuario.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Usuarios\Usuario.edmx.diagram">
       <DependentUpon>Usuario.edmx</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{6cbf84a0-9a27-4a21-8e1a-62669e21eaae}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Usuarios\Usuario.Context.tt">
@@ -98,9 +105,6 @@
       <DependentUpon>Usuario.edmx</DependentUpon>
       <LastGenOutput>Usuario1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
