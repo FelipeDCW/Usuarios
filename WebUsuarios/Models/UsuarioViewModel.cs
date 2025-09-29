@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebUsuarios.Models
 {
-    public class UsuarioViewModel : IValidatableObject
+    public class UsuarioViewModel 
     {
         public int Id { get; set; }
 
@@ -17,6 +17,7 @@ namespace WebUsuarios.Models
 
         [Required(ErrorMessage = "El Rut es obligatorio.")]
         [StringLength(50, ErrorMessage = "El Rut no puede exceder los 50 caracteres.")]
+        [RutChileno(ErrorMessage = "El Rut ingresado no es válido.")]
         [Display(Name = "Rut")]
         public string Rut { get; set; }
 
@@ -33,49 +34,7 @@ namespace WebUsuarios.Models
 
         public string SearchTerm { get; set; }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        {
-            // 1. Validar el formato con una expresión regular
-            var regex = new Regex(@"^(\d{1,3}(\.\d{3})*-)?\d{1,3}\.?[kK\d]$");
-            if (!regex.IsMatch(Rut))
-            {
-                yield return new ValidationResult("El formato del RUT no es válido.", new[] { nameof(Rut) });
-            }
-
-            // 2. Validar el dígito verificador
-            // (puedes copiar el método ValidarRut() de tu clase Usuario)
-            if (!ValidarRut(Rut))
-            {
-                yield return new ValidationResult("El RUT ingresado no es válido.", new[] { nameof(Rut) });
-            }
-        }
-
-        // Método de validación del dígito verificador
-        private bool ValidarRut(string rut)
-        {
-            //... la implementación del método ValidarRut() ...
-            rut = rut.ToUpper().Replace(".", "").Replace("-", "");
-            if (rut.Length < 2) return false;
-
-            string dv = rut.Substring(rut.Length - 1, 1);
-            string numero = rut.Substring(0, rut.Length - 1);
-
-            long suma = 0;
-            long multiplo = 2;
-
-            for (int i = numero.Length - 1; i >= 0; i--)
-            {
-                suma += long.Parse(numero[i].ToString()) * multiplo;
-                multiplo = (multiplo == 7) ? 2 : multiplo + 1;
-            }
-
-            long resto = suma % 11;
-            string dvCalculado = (11 - resto).ToString();
-
-            if (dvCalculado == "10") dvCalculado = "K";
-            if (dvCalculado == "11") dvCalculado = "0";
-
-            return dvCalculado == dv;
-        }
+       
     }
+
 }

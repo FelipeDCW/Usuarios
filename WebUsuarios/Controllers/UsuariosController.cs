@@ -82,10 +82,19 @@ namespace WebUsuarios.Controllers
                     Correo = usuarioViewModel.Correo,
                     FechaNacimiento = usuarioViewModel.FechaNacimiento
                 };
+                try
+                {
+                    _repositorio.CrearUsuario(usuario);
+                    TempData["SuccessMessage"] = "Usuario creado exitosamente.";
+                    return RedirectToAction("Index");
 
-                _repositorio.CrearUsuario(usuario);
-                TempData["SuccessMessage"] = "Usuario creado exitosamente.";
-                return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", $"Error al actualizar el usuario: {ex.Message}");
+                }
+                
+                
             }
             return View(usuarioViewModel);
         }

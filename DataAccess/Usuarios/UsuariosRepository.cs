@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 
 namespace DataAccess.Usuarios
@@ -32,8 +33,19 @@ namespace DataAccess.Usuarios
         {
             try
             {
-                _contexto.Usuarios.Add(usuario);
-                _contexto.SaveChanges();
+                //// 1. Verificar unicidad del RUT
+                var rutExists = _contexto.Usuarios.Any(u => u.Rut == usuario.Rut);
+
+                if (!rutExists)
+                {
+                    _contexto.Usuarios.Add(usuario);
+                    _contexto.SaveChanges();
+                }
+                else
+                {
+                    throw new InvalidOperationException($"El RUT '{usuario.Rut}' ya está registrado.");
+                }
+               
             }
             catch (DbEntityValidationException ex)
             {
@@ -44,8 +56,17 @@ namespace DataAccess.Usuarios
 
         public void ActualizarUsuario(Usuario usuario)
         {
-            _contexto.Entry(usuario).State = EntityState.Modified;
-            _contexto.SaveChanges();
+            var rutExists = _contexto.Usuarios.Any(u => u.Rut == usuario.Rut);
+
+            if (rutExists)
+            {
+                throw new InvalidOperationException($"El RUT '{usuario.Rut}' ya está registrado.");
+            }
+            else
+            {
+                _contexto.Entry(usuario).State = EntityState.Modified;
+                _contexto.SaveChanges();
+            }
         }
 
         public void EliminarUsuario(int id)
@@ -58,7 +79,6 @@ namespace DataAccess.Usuarios
             }
         }
 
-        // Método auxiliar para formatear los errores de validación
         private string GetEntityValidationErrors(DbEntityValidationException ex)
         {
             var sb = new StringBuilder();

@@ -45,6 +45,7 @@
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="IDataAccess\IUsuariosRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validations\RutChilenoAttribute.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
